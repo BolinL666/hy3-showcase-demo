@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="zh-CN">
   <head>
@@ -7,32 +8,79 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
     <main class="shell">
-      <section class="intro" aria-labelledby="title">
-        <p class="eyebrow">Hy3 Project Planner</p>
-        <h1 id="title">项目计划生成器</h1>
-        <p class="summary">
-          输入一个项目目标，Hy3 会把它拆成里程碑、交付物、风险、验收标准和演示脚本。
-        </p>
+      <header class="hero" aria-labelledby="title">
+        <div>
+          <p class="eyebrow">Hy3 Project Planner · TokenHub Demo</p>
+          <h1 id="title">把一个想法，拆成可以执行的项目计划</h1>
+          <p class="summary">
+            输入项目目标，Hy3 会生成目标复述、里程碑、交付物、风险、验收标准和 60 秒演示脚本。
+          </p>
+        </div>
+        <div class="hero-card" aria-label="Demo 状态">
+          <span class="signal"></span>
+          <strong>真实 hy3 调用</strong>
+          <small>API Key 仅保存在本地 .env</small>
+        </div>
+      </header>
+
+      <section class="proof-strip" aria-label="作品信息">
+        <div>
+          <span>模型</span>
+          <strong>hy3</strong>
+        </div>
+        <div>
+          <span>接口</span>
+          <strong>TokenHub /v1/chat/completions</strong>
+        </div>
+        <div>
+          <span>输出</span>
+          <strong>计划 + 验收 + Demo 脚本</strong>
+        </div>
       </section>
 
       <section class="workspace" aria-label="项目拆解工作台">
         <form id="plan-form" class="composer">
-          <label for="goal">项目目标</label>
-          <textarea id="goal" name="goal" rows="7">完成 Hy3 在 5 个主流开发工具中的接入文档，并制作一个可运行示例。</textarea>
+          <div class="section-title">
+            <span class="step">01</span>
+            <div>
+              <label for="goal">输入一个真实项目场景</label>
+              <p>示例会模拟评委最容易看懂的“论文阅读助手”。</p>
+            </div>
+          </div>
+          <textarea id="goal" name="goal" rows="7">做一个面向研究生的论文阅读助手。输入论文标题和摘要后，Hy3 需要输出论文贡献、方法步骤、实验设计、局限性和复现计划。</textarea>
           <div class="actions">
             <button type="submit" id="submit-button">生成拆解计划</button>
             <button type="button" id="sample-button" class="secondary">换一个示例</button>
+          </div>
+          <div class="route">
+            <span>POST /api/plan</span>
+            <i></i>
+            <span>TokenHub</span>
+            <i></i>
+            <span>hy3</span>
           </div>
         </form>
 
         <article class="result-panel" aria-live="polite">
           <div class="panel-head">
-            <span>Hy3 输出</span>
+            <div>
+              <span class="step">02</span>
+              <strong>Hy3 结构化输出</strong>
+            </div>
             <button type="button" id="copy-button" class="icon-button" aria-label="复制结果">复制</button>
           </div>
-          <pre id="result">点击“生成拆解计划”后，结果会显示在这里。</pre>
+          <pre id="result">点击“生成拆解计划”后，Hy3 会把输入目标拆成可执行的阶段计划。</pre>
         </article>
+      </section>
+
+      <section class="deliverables" aria-label="提交材料">
+        <span>提交材料</span>
+        <a href="https://github.com/Tencent-Hunyuan/Hy3/pull/206">文档 PR #206</a>
+        <a href="https://github.com/BolinL666/hy3-showcase-demo">示例仓库</a>
+        <a href="assets/demo-run.gif">演示 GIF</a>
       </section>
     </main>
 
