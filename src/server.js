@@ -1,3 +1,4 @@
+
 import http from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
@@ -68,6 +69,7 @@ async function callHy3(goal) {
           content: buildPrompt(goal)
         }
       ],
+      max_tokens: 900,
       temperature: 0.4
     })
   });
