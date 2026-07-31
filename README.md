@@ -76,8 +76,6 @@ TOKENHUB_API_KEY=你的 TokenHub API Key
 PORT=8787
 ```
 
-`.env` 只用于本地运行，不需要提交到仓库。
-
 启动服务：
 
 ```bash
@@ -91,12 +89,6 @@ npm start
 
 ```text
 http://localhost:8787
-```
-
-也可以先检查配置：
-
-```bash
-npm run check
 ```
 
 ## 配置项
