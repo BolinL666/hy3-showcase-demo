@@ -52,6 +52,8 @@ http://localhost:8787
 
 ## 演示录制脚本
 
+![Hy3 项目计划生成器演示](assets/demo-run.gif)
+
 录制 45-60 秒 GIF 或视频：
 
 1. 展示首页，说明这是 Hy3 项目计划生成器。
