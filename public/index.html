@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hy3 项目计划生成器</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="intro" aria-labelledby="title">
+        <p class="eyebrow">Hy3 Project Planner</p>
+        <h1 id="title">项目计划生成器</h1>
+        <p class="summary">
+          输入一个项目目标，Hy3 会把它拆成里程碑、交付物、风险、验收标准和演示脚本。
+        </p>
+      </section>
+
+      <section class="workspace" aria-label="项目拆解工作台">
+        <form id="plan-form" class="composer">
+          <label for="goal">项目目标</label>
+          <textarea id="goal" name="goal" rows="7">完成 Hy3 在 5 个主流开发工具中的接入文档，并制作一个可运行示例。</textarea>
+          <div class="actions">
+            <button type="submit" id="submit-button">生成拆解计划</button>
+            <button type="button" id="sample-button" class="secondary">换一个示例</button>
+          </div>
+        </form>
+
+        <article class="result-panel" aria-live="polite">
+          <div class="panel-head">
+            <span>Hy3 输出</span>
+            <button type="button" id="copy-button" class="icon-button" aria-label="复制结果">复制</button>
+          </div>
+          <pre id="result">点击“生成拆解计划”后，结果会显示在这里。</pre>
+        </article>
+      </section>
+    </main>
+
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>
