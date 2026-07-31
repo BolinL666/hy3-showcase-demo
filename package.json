@@ -1,0 +1,20 @@
+{
+  "name": "hy3-showcase-demo",
+  "version": "1.0.0",
+  "description": "A small project planning workspace powered by Hy3.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "check": "node src/check-config.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "hy3",
+    "tokenhub",
+    "openai-compatible",
+    "rhinobird"
+  ],
+  "license": "MIT"
+}
